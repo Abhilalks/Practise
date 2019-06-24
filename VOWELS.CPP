@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	int l,b,i,j,n;
+	char s[20];
+	char k[20]={'a','e','i','o','u','A','E','I','O','U'};
+	clrscr();
+	printf("Enter a string\n");
+	gets(s);
+	n=strlen(s);
+	b=0;
+
+	for(i=0;i<10;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			if(k[i]==s[j])
+			{
+				b=b+1;
+			}
+		}
+	}
+	printf("Total number of vowels  %d ",b);
+	printf("\nTotal number of consonants  %d",n-b);
+	getch();
+}
